@@ -11,7 +11,7 @@ body {
     background: linear-gradient(100deg, #c03939, #2a2ab4);
  }
 
- .header {
+ .mainHeaderContent {
     display: initial;
     justify-content: center;
     width: 100%;
@@ -36,8 +36,17 @@ body {
     justify-content: center;
  }
 
- .categories {
+ .RussiaUkraineHeader, .BigTechHeader, .EconomyHeader, .ChinaHeader, .CongressHeader {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+ }
+ 
+ .CategoryContent {
     display: flex;
+    justify-content: center;
     max-width: 100%;
     height: 600px;
     padding: 10px;
@@ -47,17 +56,11 @@ body {
     margin-right: 10px;
  }
 
- .category {
-    width: 200px;
-    height: 200px;
-    border-radius: 30%;
- }
-
  img {
     width: 200px;
     height: 200px;
     border-radius: 30%;
- }
+ } 
 
  figcaption {
     display: flex;
