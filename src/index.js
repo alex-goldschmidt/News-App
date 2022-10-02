@@ -1,5 +1,1 @@
-let div = document.createElement("div");
-
-div.innerHTML = `
-
-`;
+import { pageLoad } from "./pageload";
