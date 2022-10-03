@@ -5,6 +5,7 @@ export const China = (() => {
 
   categoryHeader.innerHTML = `
       <div class="ChinaHeader" data-id="ChinaHeader">
-      <div class="title">China</div>`;
+      <div class="title">China</div>
+      <div class="buttonContainer" data-id="buttonContainer">Back</div>`;
   container.appendChild(categoryHeader);
 })();

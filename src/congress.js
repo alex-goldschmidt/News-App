@@ -5,6 +5,7 @@ export const Congress = (() => {
 
   categoryHeader.innerHTML = `
       <div class="CongressHeader" data-id="CongressHeader">
-      <div class="title">Congress</div>`;
+      <div class="title">Congress</div>
+      <div class="buttonContainer" data-id="buttonContainer">Back</div>`;
   container.appendChild(categoryHeader);
 })();

@@ -5,6 +5,7 @@ export const BigTech = (() => {
 
   categoryHeader.innerHTML = `
     <div class="BigTechHeader" data-id="BigTechHeader">
-    <div class="title">Big Tech</div>`;
+    <div class="title">Big Tech</div>
+    <div class="buttonContainer" data-id="buttonContainer">Back</div>`;
   container.appendChild(categoryHeader);
 })();

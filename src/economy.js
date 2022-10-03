@@ -5,6 +5,7 @@ export const Economy = (() => {
 
   categoryHeader.innerHTML = `
       <div class="EconomyHeader" data-id="EconomyHeader">
-      <div class="title">Economy</div>`;
+      <div class="title">Economy</div>
+      <div class="buttonContainer" data-id="buttonContainer">Back</div>`;
   container.appendChild(categoryHeader);
 })();

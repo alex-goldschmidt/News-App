@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 80%;
+}
+
+.buttonContainer {
+    background: white;
+    width: 50px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+
 body {
     display: flex;
     min-height: 100vh;
