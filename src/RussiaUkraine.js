@@ -13,23 +13,23 @@ export const RussiaUkraine = (() => {
   categoryStories.classList.add("RussiaUkraineStories");
   categoryStories.innerHTML = `
   <div class="RukStoriesBlock" data-id="RukStoriesBlock">
-          <div class="rukLeft">
+          <div class="rukLeft" data-id="rukLeft">
             <div class="lean">Left</div>
-            <div class="rukLeftOrganization" data-id="rukLeftOrganization">Organization</div>
-            <img class="rukLeftPicture" src="" alt="" data-id="rukLeftPicture"/>
-            <div class="rukLeftArticle" data-id="rukLeftArticle">This is an article</div> 
+            <div class="rukLeftOrganization" data-id="rukLeftOrganization"></div>
+            <img class="rukLeftPicture" src="" alt="no image :(" data-id="rukLeftPicture"/>
+            <a target="_blank" rel="noopener noreferrer" class="rukLeftArticle" data-id="rukLeftArticle"></a> 
           </div>    
           <div class="rukCenter">
             <div class="lean">Center</div>
-            <div>Organization</div>
-            <img src="" alt="" />
-            <div>This is an article</div>
+            <div class="rukCenterOrganization" data-id="rukCenterOrganization"></div>
+            <img class="rukCenterPicture" src="" alt="" data-id="rukCenterPicture"/>
+            <div class="rukCenterArticle" data-id="rukCenterArticle"></div> 
           </div>  
           <div class="rukRight">
             <div class="lean">Right</div>
-            <div>Organization</div>
-            <img src="" alt="" />
-            <div>This is an article</div>
+            <div class="rukRightOrganization" data-id="rukRightOrganization"></div>
+            <img class="rukRightPicture" src="" alt="" data-id="rukRightPicture"/>
+            <div class="rukRightArticle" data-id="rukRightArticle"></div> 
           </div>  
         </div>
   `;

@@ -98,3 +98,37 @@ function AllBackButtons() {
   }
 }
 AllBackButtons();
+
+window.addEventListener("load", () => {
+  FetchRukNews();
+});
+
+const rukLeftOrganization = document.querySelector(
+  `[data-id="rukLeftOrganization"]`
+);
+const rukLeftArticle = document.querySelector(`[data-id="rukLeftArticle"]`);
+const rukLeftPicture = document.querySelector(`[data-id="rukLeftPicture"]`);
+
+async function FetchRukNews() {
+  const RukResponse = await fetch(
+    `https://newsdata.io/api/1/news?apikey=pub_119111e2cfeb9f7cabec19ab21c7533e88904&&q=ukraine%20AND%20russia&language=en&country=us`,
+    { mode: "cors" }
+  );
+  const RukData = await RukResponse.json();
+
+  //this goes over all array results
+  function fetchRukLeft() {
+    console.log(RukData);
+    RukData.results.forEach((obj, i) => {
+      console.log("Source:", obj.source_id);
+      console.log("Title:", obj.title);
+      if (obj.source_id == "washingtonpost") {
+        rukLeftOrganization.innerText = obj.source_id.toUpperCase();
+        rukLeftArticle.innerText = obj.title;
+        rukLeftArticle.href = obj.link;
+        rukLeftPicture.innerText = obj.image_url;
+      }
+    });
+  }
+  fetchRukLeft();
+}

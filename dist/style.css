@@ -118,4 +118,13 @@ body {
     border-bottom: 1px solid white;
  }
 
+ .rukLeftPicture {
+   padding: 15px;
+   display: flex;
+ }
+
+ .rukLeftArticle {
+   color: gold;
+ }
+
 
