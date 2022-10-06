@@ -16,20 +16,20 @@ export const RussiaUkraine = (() => {
           <div class="rukLeft" data-id="rukLeft">
             <div class="lean">Left</div>
             <div class="rukLeftOrganization" data-id="rukLeftOrganization"></div>
-            <img class="rukLeftPicture" src="" alt="no image :(" data-id="rukLeftPicture"/>
+            <img class="rukLeftPicture" src="" alt="no image here" data-id="rukLeftPicture"/>
             <a target="_blank" rel="noopener noreferrer" class="rukLeftArticle" data-id="rukLeftArticle"></a> 
           </div>    
           <div class="rukCenter">
             <div class="lean">Center</div>
             <div class="rukCenterOrganization" data-id="rukCenterOrganization"></div>
             <img class="rukCenterPicture" src="" alt="" data-id="rukCenterPicture"/>
-            <div class="rukCenterArticle" data-id="rukCenterArticle"></div> 
+            <a target="_blank" rel="noopener noreferrer" class="rukCenterArticle" data-id="rukCenterArticle"></a> 
           </div>  
           <div class="rukRight">
             <div class="lean">Right</div>
             <div class="rukRightOrganization" data-id="rukRightOrganization"></div>
             <img class="rukRightPicture" src="" alt="" data-id="rukRightPicture"/>
-            <div class="rukRightArticle" data-id="rukRightArticle"></div> 
+            <a target="_blank" rel="noopener noreferrer" class="rukRightArticle" data-id="rukRightArticle"></a> 
           </div>  
         </div>
   `;

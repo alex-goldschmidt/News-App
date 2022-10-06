@@ -108,8 +108,8 @@ body {
  }
 
  .rukLeft, .rukCenter, .rukRight {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     text-align: center;
     border: 1px solid white;
  }
@@ -119,8 +119,12 @@ body {
  }
 
  .rukLeftPicture {
-   padding: 15px;
    display: flex;
+   padding: 15px;
+   height: 250px;
+   width: 250px;
+   border-radius: 50px;
+   margin: auto;
  }
 
  .rukLeftArticle {

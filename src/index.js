@@ -108,6 +108,16 @@ const rukLeftOrganization = document.querySelector(
 );
 const rukLeftArticle = document.querySelector(`[data-id="rukLeftArticle"]`);
 const rukLeftPicture = document.querySelector(`[data-id="rukLeftPicture"]`);
+const rukCenterOrganization = document.querySelector(
+  `[data-id="rukCenterOrganization"]`
+);
+const rukCenterArticle = document.querySelector(`[data-id="rukCenterArticle"]`);
+const rukCenterPicture = document.querySelector(`[data-id="rukCenterPicture"]`);
+const rukRightOrganization = document.querySelector(
+  `[data-id="rukRightOrganization"]`
+);
+const rukRightArticle = document.querySelector(`[data-id="rukRightArticle"]`);
+const rukRightPicture = document.querySelector(`[data-id="rukRightPicture"]`);
 
 async function FetchRukNews() {
   const RukResponse = await fetch(
@@ -122,11 +132,17 @@ async function FetchRukNews() {
     RukData.results.forEach((obj, i) => {
       console.log("Source:", obj.source_id);
       console.log("Title:", obj.title);
-      if (obj.source_id == "washingtonpost") {
+      if (
+        obj.source_id == "businessinsider_us" ||
+        obj.source_id == "cnn" ||
+        obj.source_id == "washingtonpost" ||
+        obj.source_id == "nbc" ||
+        obj.source_id == "msnbc"
+      ) {
         rukLeftOrganization.innerText = obj.source_id.toUpperCase();
         rukLeftArticle.innerText = obj.title;
         rukLeftArticle.href = obj.link;
-        rukLeftPicture.innerText = obj.image_url;
+        rukLeftPicture.src = obj.image_url;
       }
     });
   }
