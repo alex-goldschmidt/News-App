@@ -24,25 +24,79 @@ const CongressBox = document.querySelector(`[data-id="Congress"]`);
 const ChinaBox = document.querySelector(`[data-id="China"]`);
 const categories = document.querySelector(`[data-id="CategoryContent"]`);
 
+const RussiaUkraineStories = document.querySelector(".RussiaUkraineStories");
+const rukLeftOrganization = document.querySelector(
+  `[data-id="rukLeftOrganization"]`
+);
+const rukLeftArticle = document.querySelector(`[data-id="rukLeftArticle"]`);
+const rukLeftPicture = document.querySelector(`[data-id="rukLeftPicture"]`);
+
+const rukCenterOrganization = document.querySelector(
+  `[data-id="rukCenterOrganization"]`
+);
+const rukCenterArticle = document.querySelector(`[data-id="rukCenterArticle"]`);
+const rukCenterPicture = document.querySelector(`[data-id="rukCenterPicture"]`);
+
+const rukRightOrganization = document.querySelector(
+  `[data-id="rukRightOrganization"]`
+);
+const rukRightArticle = document.querySelector(`[data-id="rukRightArticle"]`);
+const rukRightPicture = document.querySelector(`[data-id="rukRightPicture"]`);
+
+const BigTechStories = document.querySelector(".BigTechStories");
+const BigTechLeftOrganizaton = document.querySelector(
+  `[data-id="BigTechLeftOrganization"]`
+);
+const BigTechLeftArticle = document.querySelector(
+  `[data-id="BigTechLeftArticle"]`
+);
+const BigTechLeftPicture = document.querySelector(
+  `[data-id="BigTechLeftPicture"]`
+);
+const BigTechCenterOrganization = document.querySelector(
+  `[data-id="BigTechCenterOrganization"]`
+);
+const BigTechCenterArticle = document.querySelector(
+  `[data-id="BigTechCenterArticle"]`
+);
+const BigTechCenterPicture = document.querySelector(
+  `[data-id="BigTechCenterPicture"]`
+);
+
+const BigTechRightOrganization = document.querySelector(
+  `[data-id="BigTechRightOrganization"]`
+);
+const BigTechRightArticle = document.querySelector(
+  `[data-id="BigTechRightArticle"]`
+);
+const BigTechRightPicture = document.querySelector(
+  `[data-id="BigTechRightPicture"]`
+);
+
 RussiaUkraineBox.addEventListener("click", () => {
   RussiaUkraineHeader.style.display = "initial";
   RukStoriesBlock.style.display = "flex";
+  RussiaUkraineStories.style.display = "block";
   BigTechHeader.style.display = "none";
   EconomyHeader.style.display = "none";
   CongressHeader.style.display = "none";
   ChinaHeader.style.display = "none";
   mainHeader.style.display = "none";
   categories.style.display = "none";
+  BigTechStories.style.display = "none";
 });
 
 BigTechBox.addEventListener("click", () => {
   BigTechHeader.style.display = "initial";
+  BigTechStoriesBlock.style.display = "flex";
+  BigTechStories.style.display = "block";
   RussiaUkraineHeader.style.display = "none";
   EconomyHeader.style.display = "none";
   CongressHeader.style.display = "none";
   ChinaHeader.style.display = "none";
   mainHeader.style.display = "none";
   categories.style.display = "none";
+  RussiaUkraineStories.style.display = "none";
 });
 
 EconomyBox.addEventListener("click", () => {
@@ -78,7 +132,9 @@ ChinaBox.addEventListener("click", () => {
 
 //stories card for each category's page
 const RukStoriesBlock = document.querySelector(`[data-id="RukStoriesBlock"]`);
-RukStoriesBlock.style.display = "none";
+const BigTechStoriesBlock = document.querySelector(
+  `[data-id="BigTechStoriesBlock"]`
+);
 //
 
 //targets back button to bring user back home, while clearing all other contents
@@ -94,40 +150,26 @@ function AllBackButtons() {
       ChinaHeader.style.display = "none";
       CongressHeader.style.display = "none";
       RukStoriesBlock.style.display = "none";
+      RussiaUkraineStories.style.display = "none";
+      BigTechStories.style.display = "none";
     });
   }
 }
 AllBackButtons();
 
 window.addEventListener("load", () => {
-  FetchRukNews();
+  FetchRussiaUkraineNews();
 });
 
-const rukLeftOrganization = document.querySelector(
-  `[data-id="rukLeftOrganization"]`
-);
-const rukLeftArticle = document.querySelector(`[data-id="rukLeftArticle"]`);
-const rukLeftPicture = document.querySelector(`[data-id="rukLeftPicture"]`);
-const rukCenterOrganization = document.querySelector(
-  `[data-id="rukCenterOrganization"]`
-);
-const rukCenterArticle = document.querySelector(`[data-id="rukCenterArticle"]`);
-const rukCenterPicture = document.querySelector(`[data-id="rukCenterPicture"]`);
-const rukRightOrganization = document.querySelector(
-  `[data-id="rukRightOrganization"]`
-);
-const rukRightArticle = document.querySelector(`[data-id="rukRightArticle"]`);
-const rukRightPicture = document.querySelector(`[data-id="rukRightPicture"]`);
-
-async function FetchRukNews() {
+async function FetchRussiaUkraineNews() {
   const RukResponse = await fetch(
-    `https://newsdata.io/api/1/news?apikey=pub_119111e2cfeb9f7cabec19ab21c7533e88904&&q=ukraine%20AND%20russia&language=en&country=us`,
+    `https://newsdata.io/api/1/news?apikey=pub_119111e2cfeb9f7cabec19ab21c7533e88904&&q=ukraine&language=en&country=us,gb`,
     { mode: "cors" }
   );
   const RukData = await RukResponse.json();
 
   //this goes over all array results
-  function fetchRukLeft() {
+  function fetchRussiaUkraineLeft() {
     console.log(RukData);
     RukData.results.forEach((obj, i) => {
       console.log("Source:", obj.source_id);
@@ -137,7 +179,14 @@ async function FetchRukNews() {
         obj.source_id == "cnn" ||
         obj.source_id == "washingtonpost" ||
         obj.source_id == "nbc" ||
-        obj.source_id == "msnbc"
+        obj.source_id == "cbsnews" ||
+        obj.source_id == "msnbc" ||
+        obj.source_id == "npr" ||
+        obj.source_id == "abcnews" ||
+        obj.source_id == "insider" ||
+        obj.source_id == "yahoo" ||
+        obj.source_id == "vox" ||
+        obj.source_id == "thescottishsun"
       ) {
         rukLeftOrganization.innerText = obj.source_id.toUpperCase();
         rukLeftArticle.innerText = obj.title;
@@ -146,5 +195,49 @@ async function FetchRukNews() {
       }
     });
   }
-  fetchRukLeft();
+  fetchRussiaUkraineLeft();
+
+  //this goes over all array results
+  function fetchRussiaUkraineRight() {
+    console.log(RukData);
+    RukData.results.forEach((obj, i) => {
+      console.log("Source:", obj.source_id);
+      console.log("Title:", obj.title);
+      if (
+        obj.source_id == "fox" ||
+        obj.source_id == "nypost" ||
+        obj.source_id == "washingtontimes" ||
+        obj.source_id == "wsj" ||
+        obj.source_id == "thejournal" ||
+        obj.source_id == "dailymailuk" ||
+        obj.source_id == "express"
+      ) {
+        rukRightOrganization.innerText = obj.source_id.toUpperCase();
+        rukRightArticle.innerText = obj.title;
+        rukRightArticle.href = obj.link;
+        rukRightPicture.src = obj.image_url;
+      }
+    });
+  }
+  fetchRussiaUkraineRight();
+
+  //this goes over all array results
+  function fetchRussiaUkraineCenter() {
+    console.log(RukData);
+    RukData.results.forEach((obj, i) => {
+      console.log("Source:", obj.source_id);
+      console.log("Title:", obj.title);
+      if (
+        obj.source_id == "theconversation" ||
+        obj.source_id == "forbes" ||
+        obj.source_id == "cnbc"
+      ) {
+        rukCenterOrganization.innerText = obj.source_id.toUpperCase();
+        rukCenterArticle.innerText = obj.title;
+        rukCenterArticle.href = obj.link;
+        rukCenterPicture.src = obj.image_url;
+      }
+    });
+  }
+  fetchRussiaUkraineCenter();
 }

@@ -1,134 +1,186 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    background: linear-gradient(100deg, #c03939, #2a2ab4);
- }
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  background: linear-gradient(100deg, #c03939, #2a2ab4);
+}
 
 .container {
-    width: 80%;
+  width: 80%;
 }
 
 .buttonContainer {
-    background: white;
-    width: 50px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 15px;
+  background: white;
+  width: 50px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 15px;
 }
 
- .mainHeaderContent {
-    display: initial;
-    justify-content: center;
-    width: 100%;
-    height: 75px;
-    padding: 10px;
- }
+.mainHeaderContent {
+  display: initial;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  padding: 10px;
+}
 
- .title {
-    display: flex;
-    justify-content: center;
-    font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
-    font-weight: 400;
-    font-size: 60px;
-    color: white;
- }
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: white;
+}
 
- .motto {
-    font-size: 20px;
-    font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
-    color: white;
-    display: flex;
-    justify-content: center;
- }
- 
- .CategoryContent {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    height: 600px;
-    padding: 10px;
-    max-height: 100%;
-    column-gap: 70px;
-    padding: 75px;
-    margin-right: 10px;
- }
+.motto {
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
 
- .image {
-    width: 200px;
-    height: 200px;
-    border-radius: 30%;
- } 
+.CategoryContent {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: 600px;
+  padding: 10px;
+  max-height: 100%;
+  column-gap: 70px;
+  padding: 75px;
+  margin-right: 10px;
+}
 
- figcaption {
-    display: flex;
-    justify-content: center;
-    color: white;
- }
+.image {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+}
 
- .category:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+figcaption {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.category:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
-  
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
   }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 
-  /* css from separate js modules */
-  .RussiaUkraineHeader, .BigTechHeader, .EconomyHeader, .ChinaHeader, .CongressHeader {
-    display: none;
-    justify-content: center;
-    width: 100%;
-    height: 75px;
-    padding: 10px;
- }
+/* css from separate js modules */
+.RussiaUkraineHeader,
+.BigTechHeader,
+.EconomyHeader,
+.ChinaHeader,
+.CongressHeader {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  padding: 10px;
+}
 
+.RukStoriesBlock,
+.BigTechStoriesBlock {
+  display: none;
+  justify-content: center;
+  color: white;
+}
 
- .RukStoriesBlock {
-    display: none;
-    justify-content: center;
-    color: white;
- }
+.rukLeft,
+.rukCenter,
+.BigTechLeft,
+.BigTechCenter {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-right: 1px solid white;
+}
+.rukRight,
+.BigTechRight {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+}
 
- .rukLeft, .rukCenter, .rukRight {
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    border: 1px solid white;
- }
+.RukLean,
+.BigTechLean {
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
 
- .lean {
-    border-bottom: 1px solid white;
- }
+.rukLeftPicture,
+.rukRightPicture,
+.rukCenterPicture,
+.BigTechLeftPicture,
+.BigTechRightPicture,
+.BigTechCenterPicture {
+  display: flex;
+  padding: 15px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50px;
+  margin: auto;
+}
 
- .rukLeftPicture {
-   display: flex;
-   padding: 15px;
-   height: 250px;
-   width: 250px;
-   border-radius: 50px;
-   margin: auto;
- }
+.rukLeftArticle,
+.rukRightArticle,
+.rukCenterArticle,
+.BigTechLeftArticle,
+.BigTechRightArticle,
+.BigTechCenterArticle {
+  color: gold;
+}
 
- .rukLeftArticle {
-   color: gold;
- }
-
-
+.RussiaUkraineStories,
+.BigTechStories {
+  border: 1px solid white;
+  border-radius: 25px;
+}
