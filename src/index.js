@@ -159,11 +159,12 @@ AllBackButtons();
 
 window.addEventListener("load", () => {
   FetchRussiaUkraineNews();
+  FetchBigTechNews();
 });
 
 async function FetchRussiaUkraineNews() {
   const RukResponse = await fetch(
-    `https://newsdata.io/api/1/news?apikey=pub_119111e2cfeb9f7cabec19ab21c7533e88904&&q=ukraine&language=en&country=us,gb`,
+    `https://newsdata.io/api/1/news?apikey=pub_119111e2cfeb9f7cabec19ab21c7533e88904&q=ukraine&language=en&country=us,gb`,
     { mode: "cors" }
   );
   const RukData = await RukResponse.json();
@@ -240,4 +241,90 @@ async function FetchRussiaUkraineNews() {
     });
   }
   fetchRussiaUkraineCenter();
+}
+
+async function FetchBigTechNews() {
+  const BigTechResponse = await fetch(
+    //change api key to fit category
+    `https://newsdata.io/api/1/news?apikey=pub_119111e2cfeb9f7cabec19ab21c7533e88904&q=musk%20AND%20twitter&language=en&country=us,gb`,
+    { mode: "cors" }
+  );
+  const BigTechData = await BigTechResponse.json();
+
+  //this goes over all array results
+  function fetchBigTechLeft() {
+    console.log(BigTechData);
+    BigTechData.results.forEach((obj, i) => {
+      console.log("Source:", obj.source_id);
+      console.log("Title:", obj.title);
+      if (
+        obj.source_id == "techcrunch" ||
+        obj.source_id == "businessinsider_us" ||
+        obj.source_id == "cnn" ||
+        obj.source_id == "washingtonpost" ||
+        obj.source_id == "nbc" ||
+        obj.source_id == "cbsnews" ||
+        obj.source_id == "msnbc" ||
+        obj.source_id == "npr" ||
+        obj.source_id == "abcnews" ||
+        obj.source_id == "insider" ||
+        obj.source_id == "yahoo" ||
+        obj.source_id == "vox" ||
+        obj.source_id == "thescottishsun" ||
+        obj.source_id == "theguardian"
+      ) {
+        BigTechLeftOrganizaton.innerText = obj.source_id.toUpperCase();
+        BigTechLeftArticle.innerText = obj.title;
+        BigTechLeftArticle.href = obj.link;
+        BigTechLeftPicture.src = obj.image_url;
+      }
+    });
+  }
+  fetchBigTechLeft();
+
+  //this goes over all array results
+  function fetchBigTechRight() {
+    console.log(BigTechData);
+    BigTechData.results.forEach((obj, i) => {
+      console.log("Source:", obj.source_id);
+      console.log("Title:", obj.title);
+      if (
+        obj.source_id == "oilprice" ||
+        obj.source_id == "nypost" ||
+        obj.source_id == "washingtontimes" ||
+        obj.source_id == "wsj" ||
+        obj.source_id == "thejournal" ||
+        obj.source_id == "dailymailuk" ||
+        obj.source_id == "express"
+      ) {
+        BigTechRightOrganization.innerText = obj.source_id.toUpperCase();
+        BigTechRightArticle.innerText = obj.title;
+        BigTechRightArticle.href = obj.link;
+        BigTechRightPicture.src = obj.image_url;
+      }
+    });
+  }
+  fetchBigTechRight();
+
+  //this goes over all array results
+  function fetchBigTechCenter() {
+    console.log(BigTechData);
+    BigTechData.results.forEach((obj, i) => {
+      console.log("Source:", obj.source_id);
+      console.log("Title:", obj.title);
+      if (
+        obj.source_id == "financialtimes" ||
+        obj.source_id == "forbes" ||
+        obj.source_id == "cnbc" ||
+        obj.source_id == "skynews" ||
+        obj.source_id == "theconversation"
+      ) {
+        BigTechCenterOrganization.innerText = obj.source_id.toUpperCase();
+        BigTechCenterArticle.innerText = obj.title;
+        BigTechCenterArticle.href = obj.link;
+        BigTechCenterPicture.src = obj.image_url;
+      }
+    });
+  }
+  fetchBigTechCenter();
 }
