@@ -37,7 +37,7 @@ export const PageLoad = (() => {
   <div class="Congress" data-id="Congress">
   <figure class="category">
       <img class="image" src="../dist/images/Congress.png" alt="m1">
-      <figcaption>Congress</figcaption>
+      <figcaption>Politics</figcaption>
   </figure>
   </div>
 
