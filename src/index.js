@@ -298,6 +298,7 @@ async function FetchRussiaUkraineNews() {
   function fetchRussiaUkraineLeft() {
     RukData.results.forEach((obj, i) => {
       if (
+        obj.source_id == "theguardian" ||
         obj.source_id == "businessinsider_us" ||
         obj.source_id == "cnn" ||
         obj.source_id == "washingtonpost" ||
@@ -353,7 +354,11 @@ async function FetchRussiaUkraineNews() {
       if (
         obj.source_id == "theconversation" ||
         obj.source_id == "forbes" ||
-        obj.source_id == "cnbc"
+        obj.source_id == "cnbc" ||
+        obj.source_id == "financialtimes" ||
+        obj.source_id == "skynews" ||
+        obj.source_id == "nbcnews" ||
+        obj.source_id == "reuters"
       ) {
         rukCenterOrganization.innerText = obj.source_id.toUpperCase();
         rukCenterArticle.innerText = obj.title;
@@ -441,7 +446,9 @@ async function FetchBigTechNews() {
         obj.source_id == "forbes" ||
         obj.source_id == "cnbc" ||
         obj.source_id == "skynews" ||
-        obj.source_id == "theconversation"
+        obj.source_id == "theconversation" ||
+        obj.source_id == "nbcnews" ||
+        obj.source_id == "reuters"
       ) {
         BigTechCenterOrganization.innerText = obj.source_id.toUpperCase();
         BigTechCenterArticle.innerText = obj.title;
