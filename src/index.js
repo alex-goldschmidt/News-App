@@ -280,11 +280,11 @@ function AllBackButtons() {
 AllBackButtons();
 
 window.addEventListener("load", () => {
-  FetchRussiaUkraineNews();
-  FetchBigTechNews();
-  FetchEconomyNews();
-  FetchCongressNews();
-  FetchChinaNews();
+  //FetchRussiaUkraineNews();
+  //FetchBigTechNews();
+  //FetchEconomyNews();
+  //FetchCongressNews();
+  //FetchChinaNews();
 });
 
 async function FetchRussiaUkraineNews() {
