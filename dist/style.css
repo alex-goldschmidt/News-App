@@ -63,7 +63,11 @@ body {
   row-gap: 1rem;
 }
 
-.image {
+.RussiaUkraineCategoryImage,
+.BigTechCategoryImage,
+.EconomyCategoryImage,
+.CongressCategoryImage,
+.ChinaCategoryImage {
   width: 200px;
   height: 200px;
   border-radius: 30%;

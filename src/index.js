@@ -10,6 +10,19 @@ import CongressPicture from "../dist/images/Congress.png";
 import EconomyPicture from "../dist/images/Economy.png";
 import ChinaPicture from "../dist/images/China.png";
 
+const RussiaUkraineCategoryImage = document.querySelector(
+  ".RussiaUkraineCategoryImage"
+);
+const BigTechCategoryImage = document.querySelector(".BigTechCategoryImage");
+const EconomyCategoryImage = document.querySelector(".EconomyCategoryImage");
+const CongressCategoryImage = document.querySelector(".CongressCategoryImage");
+const ChinaCategoryImage = document.querySelector(".ChinaCategoryImage");
+RussiaUkraineCategoryImage.src = RussiaUkrainePicture;
+BigTechCategoryImage.src = BigTechPicture;
+CongressCategoryImage.src = CongressPicture;
+EconomyCategoryImage.src = EconomyPicture;
+ChinaCategoryImage.src = ChinaPicture;
+
 //headers for each page
 const mainHeader = document.querySelector(`[data-id="mainHeaderContent"]`);
 const RussiaUkraineHeader = document.querySelector(
@@ -323,7 +336,7 @@ async function FetchRussiaUkraineNews() {
         rukLeftPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        rukLeftPicture.src = "../dist/images/Russia Ukraine.png";
+        rukLeftPicture.src = RussiaUkrainePicture;
       }
     });
   }
@@ -347,7 +360,7 @@ async function FetchRussiaUkraineNews() {
         rukRightPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        rukRightPicture.src = "../dist/images/Russia Ukraine.png";
+        rukRightPicture.src = RussiaUkrainePicture;
       }
     });
   }
@@ -371,7 +384,7 @@ async function FetchRussiaUkraineNews() {
         rukCenterPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        rukCenterPicture.src = "../dist/images/Russia Ukraine.png";
+        rukCenterPicture.src = RussiaUkrainePicture;
       }
     });
   }
@@ -412,7 +425,7 @@ async function FetchBigTechNews() {
         BigTechLeftPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        BigTechLeftPicture.src = "../dist/images/Big tech.png";
+        BigTechLeftPicture.src = BigTechPicture;
       }
     });
   }
@@ -437,7 +450,7 @@ async function FetchBigTechNews() {
         BigTechRightPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        BigTechRightPicture.src = "../dist/images/Big tech.png";
+        BigTechRightPicture.src = BigTechPicture;
       }
     });
   }
@@ -461,7 +474,7 @@ async function FetchBigTechNews() {
         BigTechCenterPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        BigTechCenterPicture.src = "../dist/images/Big tech.png";
+        BigTechCenterPicture.src = BigTechPicture;
       }
     });
   }
@@ -502,7 +515,7 @@ async function FetchEconomyNews() {
         EconomyLeftPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        EconomyLeftPicture.src = "../dist/images/Economy.png";
+        EconomyLeftPicture.src = EconomyPicture;
       }
     });
   }
@@ -526,7 +539,7 @@ async function FetchEconomyNews() {
         EconomyRightPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        EconomyRightPicture.src = "../dist/images/Economy.png";
+        EconomyRightPicture.src = EconomyPicture;
       }
     });
   }
@@ -549,7 +562,7 @@ async function FetchEconomyNews() {
         EconomyCenterPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        EconomyCenterPicture.src = "../dist/images/Economy.png";
+        EconomyCenterPicture.src = EconomyPicture;
       }
     });
   }
@@ -594,7 +607,7 @@ async function FetchCongressNews() {
         CongressLeftPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        CongressLeftPicture.src = "../dist/images/Congress.png";
+        CongressLeftPicture.src = CongressPicture;
       }
     });
   }
@@ -621,7 +634,7 @@ async function FetchCongressNews() {
         CongressRightPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        CongressRightPicture.src = "../dist/images/Congress.png";
+        CongressRightPicture.src = CongressPicture;
       }
     });
   }
@@ -645,7 +658,7 @@ async function FetchCongressNews() {
         CongressCenterPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        CongressCenterPicture.src = "../dist/images/Congress.png";
+        CongressCenterPicture.src = CongressPicture;
       }
     });
   }
@@ -687,7 +700,7 @@ async function FetchChinaNews() {
         ChinaLeftPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        ChinaLeftPicture.src = "../dist/images/China.png";
+        ChinaLeftPicture.src = ChinaPicture;
       }
     });
   }
@@ -715,7 +728,7 @@ async function FetchChinaNews() {
         ChinaRightPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        ChinaRightPicture.src = "../dist/images/China.png";
+        ChinaRightPicture.src = ChinaPicture;
       }
     });
   }
@@ -739,7 +752,7 @@ async function FetchChinaNews() {
         ChinaCenterPicture.src = obj.image_url;
       }
       if (obj.image_url == null) {
-        ChinaCenterPicture.src = "../dist/images/China.png";
+        ChinaCenterPicture.src = ChinaPicture;
       }
     });
   }
