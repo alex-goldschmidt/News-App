@@ -15,7 +15,7 @@ export const PageLoad = (() => {
   <div class="CategoryContent" data-id="CategoryContent">     
   <div class="RussiaUkraine" data-id="RussiaUkraine">
   <figure class="category">
-      <img class="image" src="../images/Russia Ukraine.png" alt="m1">
+      <img class="image" src="./images/Russia Ukraine.png" alt="m1">
       <figcaption>Russia & Ukraine</figcaption>
   </figure>
   </div> 

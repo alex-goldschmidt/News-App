@@ -4,6 +4,11 @@ import { BigTech } from "./BigTech";
 import { Economy } from "./economy";
 import { Congress } from "./congress";
 import { China } from "./china";
+import BigTechPicture from "../dist/images/Big tech.png";
+import RussiaUkrainePicture from "../dist/images/Russia Ukraine.png";
+import CongressPicture from "../dist/images/Congress.png";
+import EconomyPicture from "../dist/images/Economy.png";
+import ChinaPicture from "../dist/images/China.png";
 
 //headers for each page
 const mainHeader = document.querySelector(`[data-id="mainHeaderContent"]`);
@@ -280,11 +285,11 @@ function AllBackButtons() {
 AllBackButtons();
 
 window.addEventListener("load", () => {
-  //FetchRussiaUkraineNews();
-  //FetchBigTechNews();
-  //FetchEconomyNews();
-  //FetchCongressNews();
-  //FetchChinaNews();
+  FetchRussiaUkraineNews();
+  FetchBigTechNews();
+  FetchEconomyNews();
+  FetchCongressNews();
+  FetchChinaNews();
 });
 
 async function FetchRussiaUkraineNews() {
